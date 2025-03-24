@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #adc4e7f6;
+        border: 5px dotted white;
+        text-align: center;
+        padding: 20px;
+      }
+      h1 {
+        font-family: sarif;
+        color: rgb(20, 51, 78);
+      }
+      #result {
+        font-family: cursive;
+        font-weight: bold;
+        font-style: italic;
+        text-decoration: underline;
+        text-decoration-color: aliceblue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Javascript String Methods and Loops</h1>
+
+    <p>Number Form 1 to 10</p>
+    <p id="result"></p>
+    <p id="demo"></p>
+
+    <script>
+      var number = "";
+
+      for (i = 1; i < 11; i++) {
+        number = number + i + "<br>";
+      }
+
+      document.getElementById("result").innerHTML = number;
+      document.write("The random value is " + Math.floor(Math.random() * 100));
+      document.write("<br><br>");
+
+      var date = new Date();
+      document.write(
+        "Current Time is " + date.toLocaleTimeString() + "<br><br>"
+      );
+      document.write("Today's Date is " + date.getDate() + "<br><br>");
+      document.write("Current Month is " + (date.getMonth() + 1) + "<br><br>");
+      document.write("Current Year is " + date.getFullYear() + "<br>");
+      switch (new Date().getDay()) {
+        case 0:
+          day = "Sunday";
+          break;
+
+        case 1:
+          day = "Monday";
+          break;
+
+        case 2:
+          day = "Tuesday";
+          break;
+
+        case 3:
+          day = "Wednesday";
+          break;
+
+        case 4:
+          day = "Thursday";
+          break;
+
+        case 5:
+          day = "Friday";
+          break;
+
+        case 6:
+          day = "Saturday";
+      }
+
+      document.getElementById("demo").innerHTML = "Today is " + day;
+    </script>
+  </body>
+</html>
